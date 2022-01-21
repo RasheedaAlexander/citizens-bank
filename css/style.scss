@@ -114,6 +114,7 @@ div {
   .citizens_advantage {
     .services {
       padding-bottom: 10px;
+      
       h2 {
         padding-bottom: 0;
         font-size: 26px;
@@ -121,10 +122,12 @@ div {
         line-height: 1.292;
         text-align: left;
       }
+
       p {
         color: map-get($colors, paragraph);
         line-height: 1.7;
       }
+
       .learn-more {
         color: map-get($colors, arrow);
         font-size: 18px;
@@ -134,6 +137,7 @@ div {
           object-position: bottom;
         }
       }
+
       .grey-divider {
         padding: 10px 0;
         margin: 0 auto;
@@ -168,6 +172,7 @@ div {
 
     blockquote {
       padding: 0 40px;
+
       p {
         background: left / contain no-repeat url("../images/quote.png");
         background-size: 60px 50px;
@@ -190,10 +195,12 @@ div {
       text-align: left;
       padding-right: 0;
     }
+
     p {
       color: map-get($colors, grey-line);
       font-size: 12px;
     }
+
     a {
       padding-left: 0;
       padding-right: 0;
@@ -210,9 +217,13 @@ div {
     padding: 20px;
 
     .header {
-      padding: 0;
       text-align: left;
+
+      .logo {
+        padding: 0;
+      }
     }
+
     .creative {
       width: 100vw;
       height: 450px;
@@ -220,6 +231,7 @@ div {
       background-repeat: no-repeat;
       background-size: cover;
     }
+
     .citizens_advantage {
       .section {
         display: grid;
@@ -229,8 +241,11 @@ div {
         .services {
           margin: 5px 0;
           padding: 20px 0;
-          border-color: map-get($colors, grey-line);
-          border-right: 1px solid;
+
+          &:nth-child(odd) {
+            border-color: map-get($colors, grey-line);
+            border-right: 1px solid;
+          }
         }
 
         .grey-divider {
@@ -261,10 +276,12 @@ div {
         }
       }
     }
+
     .footer {
       .social-icons {
         padding-left: 0;
       }
+
       a {
         padding-left: 18px;
       }
