@@ -26,32 +26,41 @@ div {
 }
 
 .container {
-    a, h1, h2, h4, p, .careers, .citizens_bank, .quotes, .footer, .social-icons
-        {
-            padding: 18px;
-    }
+  background-color: map-get($colors, background);
+  box-sizing: border-box;
+
+  a,
+  h1,
+  h2,
+  h4,
+  p,
+  .careers,
+  .citizens_bank,
+  .quotes,
+  .footer,
+  .social-icons {
+    padding: 18px;
+  }
 
   h1 {
     margin: 0;
-  font-size: 30px;
-  color: map-get($colors, primary);
-  text-align: center;
-}
+    font-size: 30px;
+    color: map-get($colors, primary);
+    text-align: center;
+  }
 
-a {
-  text-decoration: none;
-}
-  background-color: map-get($colors, background);
-  box-sizing: border-box;
+  a {
+    text-decoration: none;
+  }
 
   .header {
     height: 67px;
     text-align: center;
 
     .logo {
-        img {
-            padding: 20px;
-        }
+      img {
+        padding: 20px;
+      }
     }
   }
 
@@ -60,7 +69,7 @@ a {
     height: 201px;
     background-image: url("../images/smiling-lady.png");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 
     .smile {
       background-color: map-get($colors, paragraph);
@@ -89,10 +98,9 @@ a {
 
   .careers {
     text-align: center;
-      
 
     .button {
-        padding: 15px 32px;
+      padding: 15px 32px;
       background-color: map-get($colors, button);
       border: none;
       color: map-get($colors, background);
@@ -105,9 +113,9 @@ a {
 
   .citizens_advantage {
     .services {
-        padding-bottom: 10px;
+      padding-bottom: 10px;
       h2 {
-          padding-bottom: 0;
+        padding-bottom: 0;
         font-size: 26px;
         color: map-get($colors, primary);
         line-height: 1.292;
@@ -127,7 +135,7 @@ a {
         }
       }
       .grey-divider {
-          padding: 10px 0;
+        padding: 10px 0;
         margin: 0 auto;
         border-width: 0.4px;
         border-color: map-get($colors, grey-line);
@@ -139,9 +147,8 @@ a {
   }
 
   .citizens_bank {
-    
     h4 {
-        background-color: map-get($colors, primary);
+      background-color: map-get($colors, primary);
       color: map-get($colors, background);
       text-align: center;
     }
@@ -160,18 +167,18 @@ a {
     align-items: flex-end;
 
     blockquote {
-        padding: 0 40px;
-        p {
+      padding: 0 40px;
+      p {
         background: left / contain no-repeat url("../images/quote.png");
         background-size: 60px 50px;
-    background-position: top 20px left;
-    color: #888888;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 1.7;
-        }
+        background-position: top 20px left;
+        color: #888888;
+        font-size: 15px;
+        font-style: italic;
+        line-height: 1.7;
+      }
 
-    figcaption {
+      figcaption {
         color: map-get($colors, primary);
         font-size: 18px;
       }
@@ -180,16 +187,16 @@ a {
 
   .footer {
     .social {
-        text-align: left;
-        padding-right: 0;
+      text-align: left;
+      padding-right: 0;
     }
     p {
       color: map-get($colors, grey-line);
       font-size: 12px;
     }
     a {
-        padding-left: 0;
-        padding-right: 0;
+      padding-left: 0;
+      padding-right: 0;
       color: map-get($colors, footer-font);
       font-size: 12px;
     }
@@ -199,23 +206,22 @@ a {
 /* Large Desktop */
 
 @media (min-width: $layout-breakpoint-lg) {
-  
-    .container {
-        padding: 20px;
-        
-      .header {
-          padding:0;
-          text-align: left;
-      }
-      .creative {
-            width: 100vw;
-            height: 450px;
-            background-image:url("../images/creative-hero-img.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-      }
-      .citizens_advantage {
-    .section {
+  .container {
+    padding: 20px;
+
+    .header {
+      padding: 0;
+      text-align: left;
+    }
+    .creative {
+      width: 100vw;
+      height: 450px;
+      background-image: url("../images/creative-hero-img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .citizens_advantage {
+      .section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 5rem;
@@ -225,14 +231,12 @@ a {
           padding: 20px 0;
           border-color: map-get($colors, grey-line);
           border-right: 1px solid;
-      }
+        }
 
         .grey-divider {
           visibility: hidden;
         }
-
       }
-    
     }
 
     .quotes {
@@ -242,19 +246,19 @@ a {
 
       blockquote {
         font-size: 14px;
-          background-position: top 55px left 35px;
-          padding: 50px;
-          line-height: 2.5;
+        background-position: top 55px left 35px;
+        padding: 50px;
+        line-height: 2.5;
 
-          figcaption{
-            justify-content: end;
-            height: 180px;
-          }
+        figcaption {
+          justify-content: end;
+          height: 180px;
+        }
 
-          .stretch {
-            padding: 30px;
-            vertical-align: baseline;
-          }
+        .stretch {
+          padding: 30px;
+          vertical-align: baseline;
+        }
       }
     }
     .footer {
@@ -265,6 +269,5 @@ a {
         padding-left: 18px;
       }
     }
-}
-    
   }
+}
