@@ -1,0 +1,270 @@
+$layout-breakpoint-sm: 320px;
+$layout-breakpoint-lg: 1280px;
+$arial: Arial;
+
+$colors: (
+  primary: #00945f,
+  background: #ffffff,
+  button: #e97300,
+  citizens-bg: #ebf7f5,
+  learn-link: #9ab65e,
+  paragraph: #888888,
+  footer-font: #000000,
+  grey-line: #666666,
+  arrow: #759b24,
+);
+
+* {
+  margin: 0;
+  font-family: $arial;
+  font-weight: 100;
+  overflow-x: hidden;
+}
+
+div {
+  display: block;
+}
+
+.container {
+    a, h1, h2, h4, p, .careers, .citizens_bank, .quotes, .footer, .social-icons
+        {
+            padding: 18px;
+    }
+
+  h1 {
+    margin: 0;
+  font-size: 30px;
+  color: map-get($colors, primary);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+  background-color: map-get($colors, background);
+  box-sizing: border-box;
+
+  .header {
+    height: 67px;
+    text-align: center;
+
+    .logo {
+        img {
+            padding: 20px;
+        }
+    }
+  }
+
+  .creative {
+    width: 100vw;
+    height: 201px;
+    background-image: url("../images/smiling-lady.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    .smile {
+      background-color: map-get($colors, paragraph);
+      width: 100%;
+      height: 201px;
+    }
+  }
+
+  .green-divider {
+    background-color: map-get($colors, primary);
+    width: 73px;
+    height: 2px;
+    margin: 15px auto;
+  }
+
+  .investment {
+    text-align: center;
+
+    .mortgage-loan {
+      font-size: 18px;
+      font-family: $arial;
+      color: map-get($colors, paragraph);
+      line-height: 1.5;
+    }
+  }
+
+  .careers {
+    text-align: center;
+      
+
+    .button {
+        padding: 15px 32px;
+      background-color: map-get($colors, button);
+      border: none;
+      color: map-get($colors, background);
+      text-decoration: none;
+      width: 165px;
+      height: 40px;
+      font-size: 24px;
+    }
+  }
+
+  .citizens_advantage {
+    .services {
+        padding-bottom: 10px;
+      h2 {
+          padding-bottom: 0;
+        font-size: 26px;
+        color: map-get($colors, primary);
+        line-height: 1.292;
+        text-align: left;
+      }
+      p {
+        color: map-get($colors, paragraph);
+        line-height: 1.7;
+      }
+      .learn-more {
+        color: map-get($colors, arrow);
+        font-size: 18px;
+
+        img {
+          border: none;
+          object-position: bottom;
+        }
+      }
+      .grey-divider {
+          padding: 10px 0;
+        margin: 0 auto;
+        border-width: 0.4px;
+        border-color: map-get($colors, grey-line);
+        border-bottom-style: solid;
+        width: 283px;
+        height: 1px;
+      }
+    }
+  }
+
+  .citizens_bank {
+    
+    h4 {
+        background-color: map-get($colors, primary);
+      color: map-get($colors, background);
+      text-align: center;
+    }
+
+    p {
+      background-color: map-get($colors, citizens-bg);
+      font-size: 18px;
+      color: map-get($colors, paragraph);
+      line-height: 1.722;
+      text-align: left;
+    }
+  }
+
+  .quotes {
+    text-align: center;
+    align-items: flex-end;
+
+    blockquote {
+        padding: 0 40px;
+        p {
+        background: left / contain no-repeat url("../images/quote.png");
+        background-size: 60px 50px;
+    background-position: top 20px left;
+    color: #888888;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.7;
+        }
+
+    figcaption {
+        color: map-get($colors, primary);
+        font-size: 18px;
+      }
+    }
+  }
+
+  .footer {
+    .social {
+        text-align: left;
+        padding-right: 0;
+    }
+    p {
+      color: map-get($colors, grey-line);
+      font-size: 12px;
+    }
+    a {
+        padding-left: 0;
+        padding-right: 0;
+      color: map-get($colors, footer-font);
+      font-size: 12px;
+    }
+  }
+}
+
+/* Large Desktop */
+
+@media (min-width: $layout-breakpoint-lg) {
+  
+    .container {
+        padding: 20px;
+        
+      .header {
+          padding:0;
+          text-align: left;
+      }
+      .creative {
+            width: 100vw;
+            height: 450px;
+            background-image:url("../images/creative-hero-img.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+      }
+      .citizens_advantage {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 5rem;
+
+        .services {
+          margin: 5px 0;
+          padding: 20px 0;
+          border-color: map-get($colors, grey-line);
+          border-right: 1px solid;
+      }
+
+        .grey-divider {
+          visibility: hidden;
+        }
+
+      }
+    
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-auto-rows: 1fr;
+
+      blockquote {
+        font-size: 14px;
+          background-position: top 55px left 35px;
+          padding: 50px;
+          line-height: 2.5;
+
+          figcaption{
+            justify-content: end;
+            height: 180px;
+          }
+
+          .stretch {
+            padding: 30px;
+            vertical-align: baseline;
+          }
+      }
+    }
+    .footer {
+      .social-icons {
+        padding-left: 0;
+      }
+      a {
+        padding-left: 18px;
+      }
+    }
+}
+    
+  }
