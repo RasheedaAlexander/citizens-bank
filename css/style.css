@@ -234,6 +234,7 @@ div {
     grid-auto-rows: 1fr;
   }
   .container .quotes blockquote {
+    height: 640px;
     font-size: 14px;
     background-position: top 55px left 35px;
     padding: 50px;
@@ -242,6 +243,9 @@ div {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .container .quotes blockquote p {
+    padding-top: 30px;
+  }
   .container .quotes blockquote figcaption {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -249,7 +253,7 @@ div {
     height: 180px;
   }
   .container .quotes blockquote .stretch {
-    padding: 30px 30px 38px 30px;
+    padding: 30px 30px 18px 30px;
     vertical-align: baseline;
   }
   .container .footer .social-icons {
