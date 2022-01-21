@@ -114,7 +114,7 @@ div {
   .citizens_advantage {
     .services {
       padding-bottom: 10px;
-      
+
       h2 {
         padding-bottom: 0;
         font-size: 26px;
@@ -264,6 +264,7 @@ div {
         background-position: top 55px left 35px;
         padding: 50px;
         line-height: 2.5;
+        align-self: center;
 
         figcaption {
           justify-content: end;
@@ -271,7 +272,7 @@ div {
         }
 
         .stretch {
-          padding: 30px;
+          padding: 30px 30px 38px 30px;
           vertical-align: baseline;
         }
       }
